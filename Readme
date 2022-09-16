@@ -1,0 +1,25 @@
+Create your first Nginx application by integrating Terraform, Ansible and Google cloud platform.
+Provision Compute engine VM using Terrafrom.
+Install Nginx webserver inside VM using Ansible
+
+Tech Stack used
+Visual stuido Editor
+GitHub Repo 
+Google Cloud
+Terraform
+Ansible
+Nginx Web Servercd
+
+
+How to guide
+1.Create a GCP project with your desired name and project ID.
+2.Attach billing account to the project and enable compute engine API compute.googleapis.com.
+2.Configure the project-ID in main.tf project_id argumnet under local block
+3.Generate RSA keys using below command and add the public key to the metadata section under compute in GCP console.
+  ssh-keygen -t rsa -f ~/.ssh/ansible -C ansible -b 2048
+4.Point the private key in main.tf under local block map to private_key_path argument.
+5.Install ansible play book and terraform
+
+
+Reference
+https://www.youtu be.com/watch?v=wVq5fwx1OQU&t=385s
